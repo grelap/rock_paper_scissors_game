@@ -4,22 +4,25 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>zadanie nr 8_12 - papier-nożyce gra</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> 
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" /> 
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <div class="container">
-      <h3 class="text-center">
-         Witaj w grze
-      <span class="label label-default">Kamień</span>
-      <span class="label label-info">Papier</span>
-      <span class="label label-danger">Nożyce</span>
-      </h3>
+   <div class="container text-center">
+      <h2 class="text-center">Witaj w grze</h2>
+      <div class="labels">     
+			<span class="label label-default">Kamień</span>
+      	<span class="label label-default">Papier</span>
+      	<span class="label label-default">Nożyce</span>
+      </div>
+
    </div>
    <div id="js-newGameElement" class="container">
       <div class="row text-center">
-         <button  id="js-newGameButton" class="btn btn-default">
+         <button  id="js-newGameButton" class="btn btn-default btn-new">
             Nowa Gra
          </button>
       </div>
@@ -39,7 +42,7 @@
             </span>
             Papier
          </button>
-         <button id="js-playerPick_scissors"  class="btn-main">
+         <button id="js-playerPick_scissors"  class="btn btn-main">
             <span class="badge">
             <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
             </span>
@@ -51,18 +54,18 @@
    <div id="js-resultsTableElement" class="container">
       <div class="row">
          <div class="col-xs-5 text-center">
-            <span id="js-playerPoints" class="badge">
+            <span id="js-playerPoints" class="badge badge-game">
             	0
             </span>
             <span id="js-playerName">
             	Imię gracza
             </span>
          </div>
-         <div class="col-xs-2 text-center">
-            VS.
+         <div class="col-xs-2 text-center text">
+            VS
          </div>
          <div class="col-xs-5 text-center">
-            <span id="js-computerPoints" class="badge">
+            <span id="js-computerPoints" class="badge badge-game">
             	0
             </span>
             	Komputer

@@ -1,17 +1,15 @@
-//guzik new game
+
 var newGameBtn = document.getElementById('js-newGameButton');
 newGameBtn.addEventListener('click', newGame);
 
-//co będzie się działo po kliknięciu przycisków
 var pickRock = document.getElementById('js-playerPick_rock'),
      pickPaper = document.getElementById('js-playerPick_paper'),
      pickScissors = document.getElementById('js-playerPick_scissors');
-//listenery na każdy z guzików - po kliknięciu wywołujemy funkcję playerPick 
+
 pickRock.addEventListener('click', function() { playerPick('kamień') });
 pickPaper.addEventListener('click', function() { playerPick('papier') });
 pickScissors.addEventListener('click', function() { playerPick('nożyce') });
-// --------------------
-//----wartości początkowe-------
+
 var gameState = 'notStarted',  //started // ended
     player = {
         name: '',
@@ -20,11 +18,11 @@ var gameState = 'notStarted',  //started // ended
     computer = {
         score: 0
     };
-//wyświetlanie elementów gry
+
 var newGameElem = document.getElementById('js-newGameElement'),
     pickElem = document.getElementById('js-playerPickElement'),
     resultsElem = document.getElementById('js-resultsTableElement');
-//stany gry - started, ended, notstarted
+
 function setGameElements() {
   switch(gameState) {
     case 'started':
@@ -33,7 +31,7 @@ function setGameElements() {
         resultsElem.style.display = 'block';
       break;
     case 'ended':
-        newGameBtn.innerText = 'Jeszcze raz';
+        newGameBtn.innerText = 'Może zagrasz jeszcze raz?';
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
@@ -42,7 +40,7 @@ function setGameElements() {
   }
 }
 setGameElements();
-//---rozpoczęcie gry
+
 var playerPointsElem = document.getElementById('js-playerPoints'),
     playerNameElem = document.getElementById('js-playerName'),
     computerPointsElem = document.getElementById('js-computerPoints');
@@ -53,11 +51,9 @@ function newGame() {
     player.score = computer.score = 0;
     gameState = 'started';
     setGameElements();
-
     playerNameElem.innerHTML = player.name;
      setGamePoints(); 
   }
-
 }
 
 function playerPick(playerPick) {
@@ -66,19 +62,17 @@ function playerPick(playerPick) {
     computerPickElem.innerHTML = computerPick;
     checkRoundWinner(playerPick, computerPick);
 }
-//wybór komputera
+
 function getComputerPick() {
     var possiblePicks = ['kamień', 'papier', 'nożyce'];
     return possiblePicks[Math.floor(Math.random()*3)];
 }
-//pokazanie wyborów graczy
+
 var playerPickElem = document.getElementById('js-playerPick'),
     computerPickElem = document.getElementById('js-computerPick'),
     playerResultElem = document.getElementById('js-playerResult'),
     computerResultElem = document.getElementById('js-computerResult');
     
-//kto wygrał
-
 function checkRoundWinner(playerPick, computerPick) {
 checkGamePoints();
   playerResultElem.innerHTML = computerResultElem.innerHTML = '';
@@ -94,7 +88,6 @@ checkGamePoints();
         
         winnerIs = 'computer';
     }
-
     if (winnerIs == 'player') {
         playerResultElem.innerHTML = "Wygrana!";
         player.score++;
@@ -104,26 +97,26 @@ checkGamePoints();
     }
 setGamePoints();
 }
-//aktualizacja wyniku
+
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
 }
+//checking who have 10pts and ending game
 function checkGamePoints() {
-    if (player.score >= 10){
+    if (player.score == 10){
         alert("Wygrałeś " + player.name);
-        newGame();
-    } else {
-        if (computer.score >= 10){
-            alert("Wygrał komputer!");
-            newGame();
-    } else {
-        if ((player.score >= 10) && (computer.score >= 10)){
+        endGame();
+    } else if (computer.score == 10){
+        alert("Wygrał komputer!");
+         endGame();
+    } else if ((player.score == 10) && (computer.score == 10)){
             alert("Mamy remis");
-           newGame();
+            endGame();
         }
-    }
+    }  
 
-
-    }
-}   
+function endGame(){      
+    gameState = 'ended';
+    setGameElements();
+}
