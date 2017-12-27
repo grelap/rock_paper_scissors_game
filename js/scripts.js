@@ -10,7 +10,7 @@ pickRock.addEventListener('click', function() { playerPick('kamień') });
 pickPaper.addEventListener('click', function() { playerPick('papier') });
 pickScissors.addEventListener('click', function() { playerPick('nożyce') });
 
-var gameState = 'notStarted',  //started // ended
+var gameState = 'notStarted', // started // ended
     player = {
         name: '',
         score: 0
@@ -24,7 +24,7 @@ var newGameElem = document.getElementById('js-newGameElement'),
     resultsElem = document.getElementById('js-resultsTableElement');
 
 function setGameElements() {
-  switch(gameState) {
+  switch (gameState) {
     case 'started':
         newGameElem.style.display = 'none';
         pickElem.style.display = 'block';
