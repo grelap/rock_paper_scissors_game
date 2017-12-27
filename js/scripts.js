@@ -26,12 +26,12 @@ var newGameElem = document.getElementById('js-newGameElement'),
 function setGameElements() {
   switch (gameState) {
     case 'started':
-        newGameElem.style.display = 'none';
-        pickElem.style.display = 'block';
-        resultsElem.style.display = 'block';
+      newGameElem.style.display = 'none';
+      pickElem.style.display = 'block';
+      resultsElem.style.display = 'block';
       break;
     case 'ended':
-        newGameBtn.innerText = 'Może zagrasz jeszcze raz?';
+      newGameBtn.innerText = 'Może zagrasz jeszcze raz?';
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
