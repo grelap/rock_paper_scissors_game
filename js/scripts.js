@@ -3,25 +3,25 @@ var newGameBtn = document.getElementById('js-newGameButton');
 newGameBtn.addEventListener('click', newGame);
 
 var pickRock = document.getElementById('js-playerPick_rock'),
-     pickPaper = document.getElementById('js-playerPick_paper'),
-     pickScissors = document.getElementById('js-playerPick_scissors');
+  pickPaper = document.getElementById('js-playerPick_paper'),
+  pickScissors = document.getElementById('js-playerPick_scissors');
 
 pickRock.addEventListener('click', function() { playerPick('kamień') });
 pickPaper.addEventListener('click', function() { playerPick('papier') });
 pickScissors.addEventListener('click', function() { playerPick('nożyce') });
 
 var gameState = 'notStarted', // started // ended
-    player = {
-        name: '',
-        score: 0
-    },
-    computer = {
-        score: 0
-    };
+  player = {
+    name: '',
+    score: 0
+  },
+  computer = {
+    score: 0
+  };
 
 var newGameElem = document.getElementById('js-newGameElement'),
-    pickElem = document.getElementById('js-playerPickElement'),
-    resultsElem = document.getElementById('js-resultsTableElement');
+  pickElem = document.getElementById('js-playerPickElement'),
+  resultsElem = document.getElementById('js-resultsTableElement');
 
 function setGameElements() {
   switch (gameState) {
