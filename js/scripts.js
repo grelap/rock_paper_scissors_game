@@ -114,9 +114,9 @@ function checkGamePoints() {
             alert("Mamy remis");
             endGame();
         }
-    }  
+    }
 
-function endGame(){      
+function endGame() {
     gameState = 'ended';
     setGameElements();
 }
