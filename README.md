@@ -1,2 +1,2 @@
-# rock_paper_scissors_game
+rock - paper - scissors game
 demo - https://xenogonx.github.io/rock_paper_scissors_game/
