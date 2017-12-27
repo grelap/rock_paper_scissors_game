@@ -72,7 +72,7 @@ var playerPickElem = document.getElementById('js-playerPick'),
     computerPickElem = document.getElementById('js-computerPick'),
     playerResultElem = document.getElementById('js-playerResult'),
     computerResultElem = document.getElementById('js-computerResult');
-    
+
 function checkRoundWinner(playerPick, computerPick) {
 checkGamePoints();
   playerResultElem.innerHTML = computerResultElem.innerHTML = '';
