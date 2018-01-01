@@ -65,7 +65,7 @@ function playerPick(playerPick) {
 
 function getComputerPick() {
     var possiblePicks = ['kamień', 'papier', 'nożyce'];
-    return possiblePicks[Math.floor(Math.random()*3)];
+    return possiblePicks[Math.floor(Math.random() * 3)];
 }
 
 var playerPickElem = document.getElementById('js-playerPick'),
