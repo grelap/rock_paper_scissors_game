@@ -102,7 +102,7 @@ function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
 }
-//checking who have 10pts and ending game
+// checking who have 10pts and ending game
 function checkGamePoints() {
     if (player.score == 10){
         alert("Wygrałeś " + player.name);
