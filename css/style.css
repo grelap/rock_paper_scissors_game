@@ -1,62 +1,60 @@
 body {
-	font-family: 'Roboto Slab', serif;
-	font-size: 2em;
-	margin: 0; 
-	background-color: #581845;
-	color: white;
-}
-
-.btn-main {
-	padding: 20px;
-	margin: 20px;
-	font-size: 2em;
-	background-color: #777777;
-	transition: .3s; 
+  font-family: 'Roboto Slab', serif;
+  font-size: 2em;
+  margin: 0; 
+  background-color: #581845;
+  color: white;
 }
 
 h2 {
-	font-size: 3em;
-	margin-top: 200px;
-	color: #FF5733;
-}
-
-.labels {
-	margin-bottom: 110px;
-	font-size: 1.5em;
+  font-size: 3em;
+  margin-top: 200px;
+  color: #FF5733;
 }
 
 .container span {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
+/* rock scissors paper buttons */
+.btn-main {
+  padding: 20px;
+  margin: 20px;
+  font-size: 2em;
+  background-color: #777777;
+  transition: .3s; 
+}
+/* rock scissors paper symbols on buttons  */
 button i.fa {
-	font-size: 6em;
+  font-size: 6em;
 }
 
-.badge-game {
-	padding: 10px;
-	font-size: 1.5em;
-	background-color: #FF5733;
-	color: white;
-	margin: 30px 10px;
+/* labels */
+.labels {
+  margin-bottom: 110px;
+  font-size: 1.5em;
 }
 
 .label-default {
-	background: none;
-	border: 1px dashed white;
+  background: none;
+  border: 1px dashed white;
 }
 
+/* score indicator */
+.badge-game {
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: #FF5733;
+  color: white;
+  margin: 30px 10px;
+}
+
+/* new game button */
 .btn-new{
-	padding: 15px 30px;
-	font-size: 2em;
-	background-color: #FF5733;
-	border: 0;
-	color: white;
-	transition: .3s;
-}
-
-.text {
-	margin-top: 40px;
-	font-size: 4em;
-	color:#FF5733;
+  padding: 15px 30px;
+  font-size: 2em;
+  background-color: #FF5733;
+  border: 0;
+  color: white;
+  transition: .3s;
 }
